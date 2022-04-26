@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todolist v2</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="./assets/scripts/main.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <form id="task-form">
+        <input type="text" id="new-task-input" placeholder="Enter a task..." />
+        <button type="submit" id="new-task-btn">submit</button>
+      </form>
+    </header>
+ 
+    <main>
+      <section class="tasks-pending">
+        <h2>Pending Tasks</h2>
+        <div class="tasklist tasks-pending__container"></div>
+      </section>
+      <section class="tasks-completed">
+        <h2>Completed Tasks</h2>
+        <div class="tasklist tasks-completed__container"></div>
+      </section>
+    </main>
+  </body>
+</html>

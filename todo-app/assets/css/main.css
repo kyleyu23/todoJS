@@ -1,0 +1,124 @@
+/* ~~~~~~ Variables ~~~~~~ */
+:root {
+  --clr-tan: #e6e2d3;
+  --clr-traffic-white: #f0f0f0;
+  --clr-yellow-green: #4caf50;
+  --clr-vermillion-red: #c94c4c;
+  --clr-blue: #008cba;
+  --clr-background: #f5f5f5;
+  --ele-border: 1px solid lightgray;
+  --border-radius: 4px;
+}
+
+/* ~~~~~~ Reset CSS ~~~~~~ */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ~~~~~~ Global style ~~~~~~ */
+body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+h2 {
+  margin-bottom: 10px;
+}
+button {
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+main {
+  width: 96%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+}
+
+
+/* ~~~~~~ Task Form/Input ~~~~~~ */
+#task-form {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 25px;
+}
+#task-form input {
+  margin-right: 5px;
+  border-radius: var(--border-radius);
+  border: var(--ele-border);
+  padding: 10px;
+}
+#task-form button {
+  background-color: var(--clr-blue);
+  border-radius: var(--border-radius);
+  border: none;
+  color: #fff;
+  padding: 0 8px;
+}
+
+/* ~~~~~~ Tasks ~~~~~~ */
+.tasks-pending,
+.tasks-completed {
+  background-color: var(--clr-background);
+  border: var(--ele-border);
+  border-radius: var(--border-radius);
+  padding: 15px;
+}
+
+/* ~~~~~~ Task ~~~~~~ */
+.task {
+  background-color: var(--clr-tan);
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+}
+.task__name{
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.task__name-edit {
+  width: 98%;
+  border-radius: var(--border-radius);
+  border: var(--ele-border);
+  padding: 5px;
+    display: none;
+}
+.task__icons {
+  display: flex;
+  gap: 5px;
+  height: 30px;
+}
+.task__icons button {
+  width: 25px;
+  height: 25px;
+}
+.task__icons svg {
+  fill: white;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  pointer-events: none;
+}
+.task__icons .edit-task {
+  background-color: var(--clr-blue);
+}
+.task__icons .delete-task {
+  background-color: var(--clr-vermillion-red);
+}
+.task__icons .arrow {
+  background-color: var(--clr-yellow-green);
+}
